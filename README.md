@@ -9,16 +9,16 @@ A script built to shortlist property listings from century21.ca.
 
 ### Prerequisites
 
-A computer with python3 and pip3 installed.
+A computer with python3 and pip3 installed. 
 
 ### How to Run
 
-Open the terminal in the cloned folder.
+Open the terminal in the cloned folder. 
 ```
 . install.sh
 python3 index.py
 ```
-This will run the script and create a csv file called, "Possibles.csv".
+The first command will install the dependencies required for the script to run and the second will create a csv file called, "Possibles.csv".
 
 ## Built With
 
