@@ -6,10 +6,10 @@ bool_ = False
 
 
 print ("Welcome to smartRealtor!")
-budget = str(raw_input("Please provide max price."+os.linesep))
-maxBedRooms = str(raw_input("Please specify the minimum number of Bedrooms."+os.linesep))
-minBathRooms = str(raw_input("Please specify the minimum number of Bathrooms."+os.linesep))
-city = str(raw_input("Please provide a city."+os.linesep))
+budget = str(input("Please provide max price."+os.linesep))
+maxBedRooms = str(input("Please specify the minimum number of Bedrooms."+os.linesep))
+minBathRooms = str(input("Please specify the minimum number of Bathrooms."+os.linesep))
+city = str(input("Please provide a city."+os.linesep))
 
 req = requests.get("https://www.century21.ca/search/PropType-RES/0-"+budget+"/Beds-"+maxBedRooms+"/Baths-"+minBathRooms+"/Q-"+city)
 content = req.content
@@ -17,7 +17,7 @@ content = req.content
 soup = BeautifulSoup(content, "html.parser")
 listings = soup.find_all("span", {"class": ["mls-id", "property-id"]}) #all the listings
 
-if soup.find("ol", {"class": "pagination"}) != null:
+if soup.find("ol", {"class": "pagination"}).findChildren() != None:
     pages = soup.find("ol", {"class": "pagination"}).findChildren()
 
 print ("Gathering Data! Please wait.")
