@@ -3,17 +3,19 @@
 </div>
 
 # Web-Scraper
-A script that allows a user to automate the process of house searching.
+A script built to shortlist property listings from century21.ca. 
+
 ## Getting Started
 
 ### Prerequisites
 
-A computer with python3, additional framewroks such as NumPy, Pandas and BeautifulSoup.
+A computer with python3 and pip3 installed.
 
 ### How to Run
 
-Assuming we are already in the folder that contains the script, "index.py" open the terminal and type:
+Open the terminal in the cloned folder.
 ```
+. install.sh
 python3 index.py
 ```
 This will run the script and create a csv file called, "Possibles.csv".
